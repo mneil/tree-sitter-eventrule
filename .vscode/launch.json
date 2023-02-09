@@ -2,6 +2,19 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "npm: test",
+      "request": "launch",
+      "runtimeArgs": [
+        "run-script",
+        "test"
+      ],
+      "runtimeExecutable": "npm",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
       "name": "Current Test (Jest)",
       "request": "launch",
       "runtimeArgs": [
@@ -32,7 +45,7 @@
       "name": "Rule2Rego (TSX)",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/node_modules/.bin/tsx",
-      "args": ["rule2rego.ts", "pattern.json"],
+      "args": ["rule2rego.ts", "pattern"],
       "cwd": "${workspaceFolder}"
     }
   ]
